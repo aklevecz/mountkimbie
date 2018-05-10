@@ -198,7 +198,18 @@ circle{
 
 	var switcher = true
 
+	function zoomOutMobile() {
+	var viewport = document.querySelector('meta[name="viewport"]');
+
+	if ( viewport ) {
+	viewport.content = "initial-scale=0.1";
+	viewport.content = "width=1400";
+	}
+	}
 	function dochange() {
+
+
+		zoomOutMobile();
 		if (window.orientation == 0){
 			document.getElementById('svg').setAttribute('viewBox', "0 0 1000 1400");
 			document.getElementById('wrapper').setAttribute('transform' ,"rotate(94) translate(0,-900)");
