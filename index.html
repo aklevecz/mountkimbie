@@ -7,6 +7,11 @@
 <meta property="og:title"              content="mount kimbie map" />
 <meta property="og:description"        content="mount kimbie map" />
 <meta property="og:image"              content="https://media.pitchfork.com/photos/5929a0fcb1335d7bf169814c/1:1/w_600/7147f7c2.jpg" />
+<style>
+circle{
+	cursor:pointer;
+}
+</style>
 </head>
 <body style="background-color:#ED7A7A;">
 	<?xml version="1.0" encoding="utf-8"?>
@@ -176,8 +181,11 @@
 	
 		<text transform="matrix(7.996034e-02 0.9968 -0.9968 7.996034e-02 1317.4969 397.1094)" fill="#F9F9F9" font-family="'Futura-Bold'" font-size="30px">MISSION</text>
 </g>
+<text transform="matrix(1 0 0 1 129.4241 795.0762)"><tspan x="0" y="0" fill="#60CAE7" font-family="'Futura-Bold'" font-size="30px">each glowing yellow bubble is the location of a ticket to Mount Kimbie</tspan><tspan x="86.7" y="72" fill="#60CAE7" font-family="'Futura-Bold'" font-size="30px">click on a bubble to receive instructions for finding the ticket</tspan><tspan x="104.5" y="144" fill="#60CAE7" font-family="'Futura-Bold'" font-size="30px">I will do my best to update this page as tickets are found!</tspan></text>
 <g id="circles">
-<circle data-message="find me in the chicken sack" id="test" fill="#FFF87B" cx="1013" cy="237" r="10"/>
+<circle data-message="this one is by the chapel" id="test" fill="#FFF87B" cx="1013" cy="237" r="10"/>
+<circle data-message="this one is dolores park" id="test" fill="#FFF87B" cx="300" cy="237" r="10"/>
+
 
 </g>
 </g>
@@ -187,6 +195,8 @@
 <script>
 	dochange();
 	window.addEventListener('orientationchange', dochange)
+
+	var switcher = true
 
 	function dochange() {
 		if (window.orientation == 0){
@@ -201,18 +211,76 @@
 	}
 
 	var circles = d3.selectAll('circle')
-					.on('click', function(){
-						alert(this.getAttribute('data-message'));
-					});
+					.on('click', circleClick);
 
 	pulse();
 	function pulse(){
-		circles
-			.transition().duration(500)
-			.attr('r', 15)
-			.transition().duration(500)
-			.attr('r', 10)
-			.on('end', pulse);
+		if (switcher==true){
+			circles
+				.transition().duration(500)
+				.attr('r', 15)
+				.transition().duration(500)
+				.attr('r', 10)
+				.on('end', pulse);
+		}
+	}
+
+	function modalReset(){
+			d3.select('body').on('click', '');
+			d3.select('#modal').remove();
+			switcher = true;
+			pulse();
+	}
+
+	function circleClick() {
+		switcher = false;
+		var gModal = d3.select('svg').append('g')
+		.attr('id', 'modal')
+
+		setTimeout(function(){d3.select('body').on('click', modalReset)}, 10);
+
+		var clickX = this.getAttribute('cx')
+		var clickY = this.getAttribute('cy')
+		var x = 450;
+		var y = 120;
+
+		var rectModal = gModal.append('rect')
+			.attr('x', clickX)
+			.attr('y', clickY)
+			.attr('height', 0)
+			.attr('width', 0)
+			.attr('fill', 'yellow');
+
+
+		rectModal.transition().duration(2000)
+			.attr('x', x)
+			.attr('y', y)
+			.attr('height', 500)
+			.attr('width', 500)
+			.on('end', function(){
+				foModal.style('opacity', 1);
+			})
+
+
+		var foModal = gModal.append('foreignObject')
+			.style('opacity', 0)
+			.style('text-align', 'center')
+			.style('vertical-align', 'middle')
+			.attr('x', x)
+			.attr('y', y)
+			.attr('height', 500)
+			.attr('width', 500)
+			.html('       <style>\
+          div{ display: table; font-size: 20px; width: 500px; height: 300px; font-family:Futura-Bold}\
+          p ,span  { display: table-cell; text-align: center; vertical-align: middle; color:black; padding:15px }\
+       </style>\
+       <body xmlns="http://www.w3.org/1999/xhtml">\
+       <span style="font-size:30px;cursor:pointer;">X</span>\
+           <div>\
+              <p id="text">'+this.getAttribute('data-message')+'</p>\
+           </div>\
+       </body>');
+
 	}
 
 </script>
