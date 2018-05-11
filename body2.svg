@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	  viewBox="0 0 1400 1000" enable-background="new 0 0 1400 1000" xml:space="preserve">
+	  		<style>
+			circle{
+				cursor:pointer;
+			}
+				text {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                 supported by Chrome and Opera */
+}
+		</style>
+<rect x="0" y="2" fill="#ED7A7A" width="1400" height="998"/>
+<line fill="none" stroke="#939FE5" stroke-width="3" stroke-miterlimit="10" x1="545.4" y1="0" x2="627.1" y2="1031.2"/>
+<line fill="none" stroke="#939FE5" stroke-width="3" stroke-miterlimit="10" x1="995.9" y1="0" x2="1084.2" y2="1031.2"/>
+<line fill="none" stroke="#939FE5" stroke-width="3" stroke-miterlimit="10" x1="0" y1="212" x2="2049.2" y2="57.4"/>
+<line fill="none" stroke="#939FE5" stroke-width="3" stroke-miterlimit="10" x1="88.3" y1="0" x2="167.8" y2="1031.2"/>
+<line fill="none" stroke="#939FE5" stroke-width="3" stroke-miterlimit="10" x1="0" y1="613.9" x2="134.7" y2="602.8"/>
+<line fill="none" stroke="#939FE5" stroke-width="3" stroke-miterlimit="10" x1="0" y1="812.6" x2="150.2" y2="801.6"/>
+<line fill="none" stroke="#939FE5" stroke-width="3" stroke-miterlimit="10" x1="0" y1="1022.4" x2="2049.2" y2="861.2"/>
+<line fill="none" stroke="#939FE5" stroke-width="3" stroke-miterlimit="10" x1="2049.2" y1="457.1" x2="589.5" y2="571.8"/>
+<line fill="none" stroke="#939FE5" stroke-width="3" stroke-miterlimit="10" x1="757.4" y1="154.6" x2="799.4" y2="554.3"/>
+<line fill="none" stroke="#939FE5" stroke-width="3" stroke-miterlimit="10" x1="1057.7" y1="730.9" x2="607.3" y2="768.5"/>
+<polyline fill="none" stroke="#939FE5" stroke-width="3" stroke-miterlimit="10" points="1170.8,123.7 1181.4,227.4 1170.4,276 
+	1188,525.6 1216.7,806 "/>
+<line fill="none" stroke="#939FE5" stroke-width="3" stroke-miterlimit="10" x1="1277.8" y1="115.6" x2="1317.2" y2="514.5"/>
+<line fill="none" stroke="#939FE5" stroke-width="3" stroke-miterlimit="10" x1="1183.6" y1="0" x2="1216.7" y2="120.2"/>
+<polygon id="park" fill="#75EAAA" points="127.4,219.5 184.5,991.3 585.8,962.1 527.2,188.8 "/>
+<g id="text">
+	
+		<text class="noselect" transform="matrix(0.9973 -7.328142e-02 7.328142e-02 0.9973 811.558 141.1745)" fill="#F9F9F9" font-family="'Futura-Bold'" font-size="43.936px">18</text>
+	
+		<text transform="matrix(0.9981 -6.200974e-02 6.200974e-02 0.9981 859.7329 540.6791)" fill="#F9F9F9" font-family="'Futura-Bold'" font-size="43.936px">19</text>
+	
+		<text transform="matrix(0.9978 -6.574226e-02 6.574226e-02 0.9978 890.5409 942.0802)" fill="#F9F9F9" font-family="'Futura-Bold'" font-size="43.936px">20</text>
+	
+		<text transform="matrix(8.051121e-02 0.9968 -0.9968 8.051121e-02 577.693 275.3568)" fill="#F9F9F9" font-family="'Futura-Bold'" font-size="43.936px">DOLORES</text>
+	
+		<text transform="matrix(9.323794e-02 0.9956 -0.9956 9.323794e-02 1024.204 218.5336)" fill="#F9F9F9" font-family="'Futura-Bold'" font-size="43.936px">GUERRERO</text>
+</g>
+<circle data-message="on the ceiling of the red newspaper box next to the dolan law one" fill="#FFF87B" cx="575.2" cy="184.9" r="8.5"/>
+<circle data-message="on the ceiling of the sf weekly newspaper box" fill="#FFF87B" cx="991.2" cy="121.3" r="8.5"/>
+<circle data-message="on the ceiling of another dolan law newspaper box" fill="#FFF87B" cx="970.3" cy="122.5" r="8.5"/>
+<circle data-message="on the ceiling of the dolan law newspaper box" fill="#FFF87B" cx="576.9" cy="206.7" r="8.5"/>
+</svg>

@@ -1,3 +1,5 @@
+var array = [];
+var addedMessage;
 window.onload=function() {
 	var a = document.getElementById("svgObject");
 	var svgDoc = a.contentDocument;
@@ -41,9 +43,9 @@ function init(svgDoc){
 		if (switcher==true){
 			circles
 				.transition().duration(500)
-				.attr('r', 15)
-				.transition().duration(500)
 				.attr('r', 10)
+				.transition().duration(500)
+				.attr('r', 7)
 				.on('end', pulse);
 		}
 	}
@@ -74,7 +76,7 @@ function init(svgDoc){
 			.attr('y', clickY)
 			.attr('height', 0)
 			.attr('width', 0)
-			.attr('fill', 'yellow');
+			.attr('fill', '#FFF87B');
 
 
 		rectModal.transition().duration(2000)
@@ -86,6 +88,13 @@ function init(svgDoc){
 				foModal.transition().duration(500).style('opacity', 1);
 			})
 
+		if (array.indexOf(this.getAttribute('data-message')) < 0) {
+			array.push(this.getAttribute('data-message'));
+		}
+
+		if (array.length>3){
+			var addedMessage = '. yes they are all literally in newspaper boxes';
+		}
 
 		var foModal = gModal.append('foreignObject')
 			.style('opacity', 0)
@@ -97,12 +106,21 @@ function init(svgDoc){
 			.attr('width', 500)
 			.html('       <style>\
           div{ display: table; font-size: 20px; width: 500px; height: 300px; font-family:Futura-Bold}\
-          p ,span  { display: table-cell; text-align: center; vertical-align: middle; color:black; padding:15px }\
+          p ,span  { display: table-cell; text-align: center; vertical-align: middle; color:black; padding:15px; padding-right:36px; }\
+          #text {\
+  -webkit-touch-callout: none; /* iOS Safari */\
+    -webkit-user-select: none; /* Safari */\
+     -khtml-user-select: none; /* Konqueror HTML */\
+       -moz-user-select: none; /* Firefox */\
+        -ms-user-select: none; /* Internet Explorer/Edge */\
+            user-select: none; /* Non-prefixed version, currently\
+                                 supported by Chrome and Opera */\
+}\
        </style>\
        <body xmlns="http://www.w3.org/1999/xhtml">\
        <span style="font-size:30px;cursor:pointer;">X</span>\
            <div>\
-              <p id="text">'+this.getAttribute('data-message')+'</p>\
+              <p id="text">'+this.getAttribute('data-message')+addedMessage+'</p>\
            </div>\
        </body>');
 
