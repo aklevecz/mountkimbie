@@ -1,5 +1,5 @@
 var array = [];
-var addedMessage;
+var addedMessage='';
 window.onload=function() {
 	var a = document.getElementById("svgObject");
 	var svgDoc = a.contentDocument;
