@@ -1,5 +1,4 @@
 var array = [];
-var addedMessage='';
 window.onload=function() {
 	var a = document.getElementById("svgObject");
 	var svgDoc = a.contentDocument;
@@ -7,6 +6,7 @@ window.onload=function() {
 	};
 
 function init(svgDoc){
+	console.log(svgDoc);
 	dochange();
 	window.addEventListener('orientationchange', dochange)
 
@@ -24,6 +24,7 @@ function init(svgDoc){
 
 		zoomOutMobile();
 		if (window.orientation == 0){
+			console.log(svgDoc)
 			svgDoc.getElementById('svg').setAttribute('viewBox', "0 0 1000 1400");
 			svgDoc.getElementById('wrapper').setAttribute('transform' ,"rotate(94) translate(0,-900)");
 		}
@@ -91,7 +92,9 @@ function init(svgDoc){
 		if (array.indexOf(this.getAttribute('data-message')) < 0) {
 			array.push(this.getAttribute('data-message'));
 		}
+		console.log(addedMessage);
 
+		addedMessage='';
 		if (array.length>3){
 			var addedMessage = '. yes they are all literally in newspaper boxes';
 		}

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	  viewBox="0 0 1400 1000" enable-background="new 0 0 1400 1000" xml:space="preserve">
 	  		<style>
 			circle{
@@ -16,6 +16,7 @@
                                  supported by Chrome and Opera */
 }
 		</style>
+<g id="wrapper">
 <rect x="0" y="2" fill="#ED7A7A" width="1400" height="998"/>
 <line fill="none" stroke="#939FE5" stroke-width="3" stroke-miterlimit="10" x1="545.4" y1="0" x2="627.1" y2="1031.2"/>
 <line fill="none" stroke="#939FE5" stroke-width="3" stroke-miterlimit="10" x1="995.9" y1="0" x2="1084.2" y2="1031.2"/>
@@ -48,4 +49,5 @@
 <circle data-message="on the ceiling of the sf weekly newspaper box" fill="#FFF87B" cx="991.2" cy="121.3" r="8.5"/>
 <circle data-message="on the ceiling of another dolan law newspaper box" fill="#FFF87B" cx="970.3" cy="122.5" r="8.5"/>
 <circle data-message="on the ceiling of the dolan law newspaper box" fill="#FFF87B" cx="576.9" cy="206.7" r="8.5"/>
+</g>
 </svg>
